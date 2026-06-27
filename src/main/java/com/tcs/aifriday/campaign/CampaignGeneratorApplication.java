@@ -1,0 +1,13 @@
+package com.tcs.aifriday.campaign;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CampaignGeneratorApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CampaignGeneratorApplication.class, args);
+	}
+
+}
