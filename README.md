@@ -6,13 +6,6 @@
 ## 🏛️ System Architecture Design Specification
 The AdVanta AI Backend is built as an enterprise-grade, deterministic Spring Boot microservice running on **Java 17**. It handles incoming multi-part processing pipelines, content synthesis normalization, and programmatic brand safety routing.
 
-┌──────────────────────────────────────────────────────────────────┐
-│                     SPRING BOOT APIS (Port 8080)                 │
-│                                                                  │
-│  [Controller Layer] ──> [Service Layer] ──> [Scheduler Service]  │
-│  (Multipart Form)        (Safety Matrix)     (Task Polling Hub)  │
-└──────────────────────────────────────────────────────────────────┘ 
-
 
 ### Data Flow Lifecycle:
 1. **Ingestion Boundary:** The API exposes a high-throughput multipart destination (`/api/v1/campaigns/generate`) that accepts metadata string keys alongside raw document streams.
